@@ -1,0 +1,718 @@
+@import 'colors';
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+html{
+    scroll-padding-top: 80px;
+}
+body{
+    
+    font-family: 'Lato', sans-serif;
+    color:$gray;
+    
+}
+.fb2022-copy{
+    display:none;
+}
+a{
+    text-decoration: none;
+
+}
+a:hover{
+    color:$success;
+}
+input, textarea{
+    border-radius: 0px;
+    color:$gray!important;
+}
+input:focus, textarea:focus{
+    outline:0px !important;
+    box-shadow: none !important;
+    
+}
+.btn-success{
+    background-color: $success;
+    border-color: $success;
+    border-radius: 0px;
+    font-weight: 600;
+    &:hover{
+        background-color: #4ea156;
+    }
+}
+.btn-outline-success{
+    border-radius: 0px;
+    color:white;
+    font-weight: 600;
+    img{
+        width: 10px;
+    }
+    &:hover{
+        background-color: #4ea156;
+    }
+}
+h1,h2,h3,h4,h5,h6{
+    color:$dark;
+    font-weight: 900;
+}
+.green{
+    color:$success;
+}
+.white{
+    color:white;
+}
+
+
+.navbar{
+    position: fixed;
+    z-index: 20;
+    margin: 0 auto;
+    padding: 30px 0;
+    background-color: $dark;
+    
+    .navbar-brand{
+        position: absolute;
+        top: 0;
+        background-color: $success;
+        display: inline-block;
+        padding: 20px 10px 0px 10px;
+        font-size: 2em;
+        color: white;
+        font-weight: 900;
+    }
+
+    li{
+        
+        .nav-link{
+            position: relative;
+            display: inline-block;
+            color:white;
+            padding: 15px 30px!important;
+            margin-right: 20px;
+        }
+        
+        .nav-link:hover{
+            color:$success;
+        }
+        .active{
+            color: $success;
+        }
+        
+    }
+   
+    .btn{
+        color:white;
+        width: 150px;
+    }
+    .btn:hover{
+        color:white;
+    }
+
+    .navbar-toggler{
+        color: white !important;
+        margin-left: auto;
+    }
+    .navbar-toggler:focus,.navbar-toggler:hover{
+        border: none;
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.section-title{
+    color: $success;
+    font-weight: bold;
+}
+
+#intro{
+    h1{
+        color:white;
+        span{
+            font-size: 1.8em;
+        }
+    }
+    background-color: $dark;
+    padding: 150px 0px 50px;
+    .btn{
+        min-width: 160px;
+    }
+    p{
+        margin: 30px 0px;
+    }
+    a{
+        display: inline-block;
+        text-align: center;
+        margin-right: 30px;
+        margin-top: 20px;
+        img{
+            margin-right: 10px;
+        }
+        &:hover{
+            color:white;
+        }
+    }
+    
+    .scroll{
+        text-align: left;
+        display:block;
+        color:$gray;
+        padding: 20px 0px;
+        margin-top: 30px;
+        }
+    .img{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+#about{
+    padding-top: 60px;
+    .section-title{
+        padding-left: 40px;
+    }
+    .left,.right{
+        padding:40px 40px;
+    }
+    .left{
+        div{
+            display: flex;
+            gap: 40px;
+            padding-bottom: 30px;
+        }
+        img{
+            width: 30px;
+        }
+    }
+}
+
+#bio{
+    .bio{
+        padding: 0;
+    }
+    .img{
+        padding: 0px 50px;
+        img{
+            width: 100%;
+        }
+    }
+    .text{
+        padding:40px ;
+    }
+}
+
+#skills{
+    background-color: $dark;
+    padding: 80px 0px;
+    h1{
+        color:white;
+    }
+
+    .skills-progress{
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 70px 0px;
+
+    .skill-wrapper {
+        height: 180px;
+        width: 180px;
+        float: left;
+        margin: 15px;
+        position: relative;
+        .skill-name{
+            color:white;
+            position: absolute;
+            font-size: 0.9rem;
+            width: 100%;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+  
+    .skill-wrapper .progress {
+        height: 100%;
+        width: 100%;
+        clip: rect(0, 180px, 180px, 90px);
+        left: 0;
+        position: absolute;
+        top: 0;
+        background-color: transparent;
+    }
+    .skill-wrapper .progress .half-circle {
+        height: 100%;
+        width: 100%;
+        border: 10px solid $success;
+        border-radius: 50%;
+        clip: rect(0, 90px, 180px, 0);
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 5;
+    }
+    .skill-wrapper .shadow {
+        height: 175px;
+        width: 175px;
+        border: 5px solid $gray;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .skill-wrapper .label {
+        color: white;
+        font-size: 3.5rem;
+        font-weight: 900;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        .smaller {
+            font-weight: 600;
+            font-size: 2rem;
+        }
+    }
+
+    .skill-wrapper.progress-64 .progress {
+        clip: rect(auto, auto, auto, auto);
+      }
+    .skill-wrapper.progress-64 .progress .right-side {
+        transform: rotate(180deg);
+      }
+
+    .skill-wrapper.progress-64 .progress .left-side {
+        transform: rotate(230deg);
+      }
+
+
+    .skill-wrapper.progress-75 .progress {
+        clip: rect(auto, auto, auto, auto);
+    }
+    .skill-wrapper.progress-75 .progress .right-side {
+        transform: rotate(180deg);
+    }
+    .skill-wrapper.progress-75 .progress .left-side {
+        transform: rotate(270deg);
+    }
+
+    .skill-wrapper.progress-46 .progress .right-side {
+        display: none;
+      }
+      .skill-wrapper.progress-46 .progress .left-side {
+        transform: rotate(162deg);
+      }
+
+    .skill-wrapper.progress-85 .progress {
+        clip: rect(auto, auto, auto, auto);
+    }
+    .skill-wrapper.progress-85 .progress .right-side {
+        transform: rotate(180deg);
+    }
+    .skill-wrapper.progress-85 .progress .left-side {
+        transform: rotate(306deg);
+    }
+
+
+ }
+}
+
+#experience{
+    padding: 50px 0px;
+    .jobs{
+        text-align: left;
+        margin-top: 40px;
+        p{
+            margin-bottom: 0;
+        }
+        .job-item{
+            border-left: 2px solid $success;
+            padding: 0px 40px 0px;
+            padding-bottom: 20px;
+            position: relative;
+            .date, .company{
+                color:black;
+                font-weight: 600;
+            }
+            .date{
+                padding-bottom: 20px;
+                &::before{
+                    content: '';
+                    width: 30px;
+                    height: 2px;
+                    background-color:$success;
+                    display: block;
+                    position: absolute;
+                    left: 0px;
+                    top: 0.6rem;
+
+                }
+                &::after{
+                    content: '';
+                    width: 15px;
+                    height: 15px;
+                    background-color:white;
+                    border: 2px solid $success;
+                    border-radius: 50%;
+                    display: block;
+                    position: absolute;
+                    left: 0px;
+                    top: 0rem;
+                    transform: translate(-50%,25%);
+                    }
+            }
+            .position{
+                font-weight: 600;
+                color:$success;
+                font-size: 1.3rem;
+            }
+            .company{
+                padding-bottom: 20px;
+            }
+        }
+        .first{
+            padding-top: 60px;
+            .date{
+                &::before{
+                    top:70px;
+                }
+                &::after{
+                    top:60px;
+                }
+            }
+        }
+        .fourth{
+            padding-bottom: 60px;
+        }
+    }
+}
+
+#contact{
+    background-color: $dark;
+    padding: 50px 0px;
+    #contact-form{
+        text-align: right;
+        padding: 50px 0px;
+        .form-group{
+            text-align: left;
+            margin-top: 20px;
+        }
+        button{
+            margin-top: 40px;
+        }
+        input,textarea{
+            background-color: transparent;
+            border-radius: 0px;
+            border: 0px;
+            border-bottom: 1px solid $gray;
+        }
+    }
+    .img{
+        margin-top: 30px;
+        img{
+            width: 100%;
+        }
+    }
+    h1{
+        color:white;
+        font-weight: 900;
+    }
+
+    .email,.phone{
+        margin-top: 30px;
+        p{
+            margin-bottom: 0.5rem!important;
+        }
+    }
+
+    .social-media{
+    img{
+        width: 30px;
+        transition: all .3s ease-in-out;
+    }
+    a img:hover{
+        transform: scale(1.3);
+    }
+   
+}
+}
+
+
+footer{
+    background-color: $dark;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    .copyright p  a{
+        color: rgba(255, 255, 255, 0.63);
+}
+    .copyright p  a:hover{
+            color:#68d372;
+    }
+}
+
+
+@media (min-width: 768px) {
+    h1{
+        font-size: 3rem;
+    }
+    .section-title{
+        font-size: 1.5rem;
+        position: relative;
+        padding-top: 20px;
+        &::before{
+            content: '';
+            width: 2px;
+            height: 120px;
+            display: block;
+            background-color: $success;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateY(-100%);
+        }
+        
+    }
+
+    #intro{
+        .container{
+            padding: 0px 40px;
+        }
+    }
+
+    #about{
+        .section-title{
+            &::before{
+
+                width: 50px;
+                height: 2px;
+                top: 35px;
+                left: -40px;
+            }
+            
+        }
+    }
+    .about-wrapper{
+        display: flex;
+        gap: 80px;
+        .left{
+            width: 30%;
+        }
+        .right{
+            width: 70%;
+            position: relative;
+            &::before{
+            content: '';
+            width: 2px;
+            height: 100px;
+            display: block;
+            background-color: $success;
+            position: absolute;
+            top: 150px;
+            left: 0;
+            transform: translateY(-100%);
+            }
+        }
+        .left{
+            img{
+                width: 40px!important;
+            }
+        }
+    }
+    #bio{
+        
+        .section-title::before{
+            width: 200px;
+            height: 2px;
+            left: -230px;
+            top: 75%;
+        }
+        .text{
+            padding-left:50px ;
+        }
+        .img{
+            margin-top: 30px;
+            z-index: 5!important;
+        }
+    }
+    #experience{
+        padding-bottom: 0px;
+        margin-bottom: -50px;
+        .jobs{
+
+            .job-item{
+                width: 50%;
+                padding: 0px 70px;
+                .date{
+                    &::before{
+                        width: 50px;
+                    }
+                }
+            }
+            .second, .fourth{
+                margin-left: auto;
+            }
+            .first{
+                padding-top: 60px;
+            }
+            .first, .third{
+                margin-left: 2px;
+                text-align: right;
+                padding-left: 0;
+                border-left: 0px;
+                border-right: 2px solid $success;
+                .date{
+                    &::before{
+                        left: 100%;
+                        transform: translateX(-100%);
+                    }
+                    &::after{
+                        left: 100%;
+
+                    }
+                }
+            }
+            .fourth{
+                padding-bottom: 150px;
+            }
+        }
+    }
+    #contact{
+        margin-top: 0px;
+        padding-top: 80px;
+        .row{
+            position: relative;
+        }
+        .form{
+            padding-right: 80px;
+
+        }
+        .contacts{
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+
+            div{
+                margin-top: 0;
+            }
+            .social-media{
+                p{
+                    margin-bottom: 0.5rem;
+                }
+                img{
+                    width: 20px;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 992px) {
+    h1{
+        font-size: 4rem;
+    }
+
+    #intro{
+        padding-bottom: 0;
+        .container{
+            display: flex;
+            gap: 30px;
+        }
+        .text{
+            width: 50%;
+        }
+        .img{
+            margin-bottom: -50px;
+            width: 50%;
+        }
+        h1{
+            position: relative;
+        }
+        h1::before{
+            content: '';
+            width: 122px;
+            height: 2px;
+            display: block;
+            background-color: $success;
+            position: absolute;
+            top: 115px;
+            left: -140px;
+
+        }
+    }
+
+    #bio{
+        padding-bottom: 0;
+    }
+    .bio{
+        display: flex;
+        .img{
+            width: 50%;
+            margin-bottom: -50px;
+        }
+        .text{
+            .section-title{
+                margin-bottom: 30px;
+            }
+            z-index: 5;
+            width: 50%;
+        }
+    }
+
+    #skills{
+        .section-title{
+
+            &::before{
+                height: 150px;
+            }
+            
+        }
+    }
+    footer{
+        text-align: left;
+        font-size: 1rem;
+    }
+}
+@media (min-width: 1200px) {
+    h1{
+        font-size: 4.4rem;
+    }
+    .about-wrapper{
+        .left{
+            width: 50%;
+            h2{
+                font-size: 3rem;
+            }
+        }
+        .right{
+            width: 48%;
+            padding-left: 0!important;
+            &::before{
+                left: -90px;
+            }
+            }
+    }
+    #contact{
+        padding-bottom: 0px;
+        padding-top: 100px;
+        .img{
+            margin-top: 125px;
+        }
+        .contacts{
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            padding-right: 80px;
+            position: absolute;
+            bottom: 100px;
+        }
+    }
+}
