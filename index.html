@@ -173,32 +173,33 @@
       </section>
       <!-- Contact -->
     <!-- Contact -->
+<!-- Contact -->
 <section id="contact" class="text-center">
   <div class="container">
     <h6 class="section-title">Contact</h6>
     <h1>Call or write <span class="green">anytime</span></h1>
     <div class="row">
       <div class="form col-md-7 col-lg-8">
-        <!-- updated form: action pointed to FormSubmit, name attributes added, and hidden settings -->
+        <!-- Web3Forms form: action set to their API endpoint, with required hidden fields -->
         <form
           id="contact-form"
-          action="https://formsubmit.co/sumitbhowmick903@gmail.com"
+          action="https://api.web3forms.com/submit"
           method="POST"
         >
-          <!-- Hidden FormSubmit settings -->
-          <input type="hidden" name="_captcha" value="false">
-          <input
-            type="hidden"
-            name="_subject"
-            value="New Contact Form Submission from Website"
-          >
-          <input
-            type="hidden"
-            name="_next"
-            value="https://your-site.com/thank-you.html"
-          >
+          <!-- 1. Your Web3Forms access key (get this from your dashboard) -->
+          <input type="hidden" name="access_key" value="92ffe7f2-2420-46c4-8cde-a39b2cfbdb5e" />
 
-          <!-- User-visible fields -->
+          <!-- 2. Optional: customize the email subject you receive -->
+          <input type="hidden" name="subject" value="New Contact Form Submission" />
+
+          <!-- 3. Optional: redirect URL after successful submit -->
+          <input
+            type="hidden"
+            name="redirect_to"
+            value="https://sumit-bhowmick.netlify.app/"
+          />
+
+          <!-- 4. Your form fields (name attributes are mandatory) -->
           <div class="form-group">
             <label for="name">Full name</label>
             <input
@@ -208,7 +209,7 @@
               name="name"
               placeholder="Your full name"
               required
-            >
+            />
           </div>
 
           <div class="form-group">
@@ -220,7 +221,7 @@
               name="email"
               placeholder="you@example.com"
               required
-            >
+            />
           </div>
 
           <div class="form-group">
@@ -238,13 +239,10 @@
             Send message
           </button>
         </form>
-
-        <!-- keep your existing script include -->
-        
       </div>
 
       <div class="img col-md-5 col-lg-4">
-    
+       
       </div>
 
       <div class="contacts img col-xl-8">
@@ -266,6 +264,7 @@
     </div>
   </div>
 </section>
+
 
       </main> 
       <!-- Footer -->
